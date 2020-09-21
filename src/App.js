@@ -24,11 +24,16 @@ function App() {
         sessionStorage.removeItem("user")
     }, [appState])
 
+    const handleClick = () => {
+        setAppState({...appState, isRegistered: !appState.isRegistered})
+    }
+
 
     return (
         <div className="App">
-            {!appState.isRegistered?<SignUp/>:null}
-            {appState.isRegistered?<Login/>:null}}
+            {!appState.isRegistered?<SignUp handleSignInClick={handleClick}/>:<Login handleSignUpClick={handleClick}/>}
+
+            {/*{appState.isRegistered?:null}}*/}
              {/*<SearchApp/>*/}
         </div>
     );
