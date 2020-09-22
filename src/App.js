@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Login from "./components/main/login";
 import SignUp from "./components/main/signup";
+import LocalStorage from "./components/noteApp/localStorage.js";
 
 function App() {
     const [appState, setAppState] = useState({
@@ -35,6 +36,7 @@ function App() {
 
             {/*{appState.isRegistered?:null}}*/}
              {/*<SearchApp/>*/}
+            {<LocalStorage/>}
         </div>
     );
 }

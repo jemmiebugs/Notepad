@@ -18,6 +18,7 @@ const SignUp =({ handleSignInClick })=>{
         })
     }
 
+
     const showLoginPage=()=>{
         showLogin(true)
         alert("true")
